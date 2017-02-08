@@ -1,0 +1,30 @@
+<div class="container">
+    <form (ngSubmit)="save()">
+        <div class="col-md-6 col-md-offset-3">
+            <h2>{{product.name}}</h2>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" class="form-control" [(ngModel)]="product.name" placeholder="name" required>
+            </div>
+            <div class="form-group">
+                <label for="quantityInStock">Quantity In Stock:</label>
+                <input type="number" id="quantityInStock" name="quantityInStock" class="form-control" [(ngModel)]="product.quantityInStock"
+                    placeholder="Quantity in stock">
+            </div>
+            <div class="form-group">
+                <label for="unitPrice">Unit Price:</label>
+                <input type="number" id="unitPrice" name="unitPrice" class="form-control" [(ngModel)]="product.unitPrice" placeholder="Unit Price" required>
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" id="isBasic" name="isBasic" [(ngModel)]="product.isBasic">Is Basic:</label>
+            </div>
+            <div class="form-group">
+                <label for="periodDurationPerUnit">Period Duration per unit:</label>
+                <input type="number" id="periodDurationPerUnit" name="periodDurationPerUnit" class="form-control" [(ngModel)]="product.periodDurationPerUnit"
+                    placeholder="Period Duration" required>
+            </div>
+            <button class="btn" type="button" (click)="goBack()">Back</button>
+            <button type="submit" class="btn btn-success">Save</button>
+        </div>
+    </form>
+</div>

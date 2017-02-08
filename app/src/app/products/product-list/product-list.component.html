@@ -1,0 +1,8 @@
+<h2>My products</h2>
+<div class="container">
+    <div class="row" *ngFor="let product of products">
+        <div class="col-md-6 col-md-offset-2">{{product.name}}</div>
+        <div class="col-md-1"><button md-raised-button color="primary" [routerLink]="['/product', product.id, 'edit']">Edit</button></div>
+        <div class="col-md-1"><button md-raised-button color="accent" [routerLink]="['/product', product.id]">Delete</button></div>
+    </div>
+</div>
